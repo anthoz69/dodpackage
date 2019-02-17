@@ -40,6 +40,8 @@ class dodpackageServiceProvider extends ServiceProvider {
         $this->app->singleton('dodslug', function ($app) {
             return new dodSlug;
         });
+
+        $this->loadHelper();
     }
 
     /**
@@ -83,5 +85,12 @@ class dodpackageServiceProvider extends ServiceProvider {
 
         // Registering package commands.
         // $this->commands([]);
+    }
+
+    protected function loadHelper() {
+        require_once 'Helpers/currency.php';
+        require_once 'Helpers/routes.php';
+        require_once 'Helpers/social.php';
+        require_once 'Helpers/time.php';
     }
 }
