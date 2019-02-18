@@ -37,7 +37,9 @@
                 "anthoz69\\dodpackage\\dodpackageServiceProvider"
             ],
             "aliases": {
-                "dodpackage": "anthoz69\\dodpackage\\Facades\\dodpackage"
+                "dodpackage": "anthoz69\\dodpackage\\Facades\\dodpackage",
+				"dodSlug": "anthoz69\\dodpackage\\Facades\\dodSlug",
+				"dodStorage": "anthoz69\\dodpackage\\Facades\\dodStorage"
             }
         }
     }
