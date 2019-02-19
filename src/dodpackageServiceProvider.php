@@ -31,7 +31,7 @@ class dodpackageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/dodpackage.php', 'dodpackage');
+        $this->mergeConfigFrom(__DIR__.'/../config/dodpackage.php', 'dodpackage');
 
         // Register the service the package provides.
         $this->app->singleton('dodpackage', function ($app) {
@@ -70,7 +70,7 @@ class dodpackageServiceProvider extends ServiceProvider
     {
         // Publishing the configuration file.
         $this->publishes([
-            __DIR__ . '/../config/dodpackage.php' => config_path('dodpackage.php'),
+            __DIR__.'/../config/dodpackage.php' => config_path('dodpackage.php'),
         ], 'dodpackage.config');
 
         // Publishing the views.
