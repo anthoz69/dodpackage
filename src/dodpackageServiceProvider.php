@@ -4,13 +4,15 @@ namespace anthoz69\dodpackage;
 
 use Illuminate\Support\ServiceProvider;
 
-class dodpackageServiceProvider extends ServiceProvider {
+class dodpackageServiceProvider extends ServiceProvider
+{
     /**
      * Perform post-registration booting of services.
      *
      * @return void
      */
-    public function boot() {
+    public function boot()
+    {
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'anthoz69');
         // $this->loadViewsFrom(__DIR__.'/../resources/views', 'anthoz69');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
@@ -27,7 +29,8 @@ class dodpackageServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function register() {
+    public function register()
+    {
         $this->mergeConfigFrom(__DIR__ . '/../config/dodpackage.php', 'dodpackage');
 
         // Register the service the package provides.
@@ -49,7 +52,8 @@ class dodpackageServiceProvider extends ServiceProvider {
      *
      * @return array
      */
-    public function provides() {
+    public function provides()
+    {
         return [
             'dodpackage',
             'dodStorage',
@@ -62,7 +66,8 @@ class dodpackageServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    protected function bootForConsole() {
+    protected function bootForConsole()
+    {
         // Publishing the configuration file.
         $this->publishes([
             __DIR__ . '/../config/dodpackage.php' => config_path('dodpackage.php'),
@@ -87,7 +92,8 @@ class dodpackageServiceProvider extends ServiceProvider {
         // $this->commands([]);
     }
 
-    protected function loadHelper() {
+    protected function loadHelper()
+    {
         require_once 'Helpers/currency.php';
         require_once 'Helpers/routes.php';
         require_once 'Helpers/social.php';
