@@ -2,7 +2,7 @@
 
 function isRoutePrefix($on, $class = 'active', $prefix = '')
 {
-    $path = Request::path();
+    $path = Request::getPathInfo();
     if (substr($path, 0, strlen($prefix)) == $prefix) {
         $realPath = substr($path, strlen($prefix));
 
