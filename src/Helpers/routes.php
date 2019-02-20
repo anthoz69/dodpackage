@@ -1,8 +1,7 @@
 <?php
 
-function isRoutePrefix($on, $class = 'active')
+function isRoutePrefix($on, $class = 'active', $prefix = '')
 {
-    $prefix = 'admin/';
     $path = Request::path();
     if (substr($path, 0, strlen($prefix)) == $prefix) {
         $realPath = substr($path, strlen($prefix));
