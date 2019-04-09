@@ -94,9 +94,9 @@ class dodpackageServiceProvider extends ServiceProvider
 
     protected function loadHelper()
     {
-        require_once 'Helpers/currency.php';
-        require_once 'Helpers/routes.php';
-        require_once 'Helpers/social.php';
-        require_once 'Helpers/time.php';
+        require_once __DIR__.'/Helpers/currency.php';
+        require_once __DIR__.'/Helpers/routes.php';
+        require_once __DIR__.'/Helpers/social.php';
+        require_once __DIR__.'/Helpers/time.php';
     }
 }
