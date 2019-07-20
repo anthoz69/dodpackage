@@ -2,9 +2,9 @@
 
 namespace anthoz69\dodpackage;
 
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 use Image;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class DodStore
 {
