@@ -5,7 +5,7 @@
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+This package is collect my methods and function use frequently in laravel be careful if you are using this package it can be breaking chage anytime. Please fork it to your own repository, And send some PR for cool feature if you need to contribute it.
 
 ## Installation
 
@@ -26,7 +26,7 @@ The package will automatically register its service provider.
 ```php
 'providers' => [
     // other providers ommited
-    Anthoz69\DodPackage\Providers\DODPackageServiceProvider::class,
+    anthoz69\dodpackage\Providers\DODPackageServiceProvider::class,
 ],
 ```
 
@@ -53,7 +53,7 @@ dodStore::cropImage($request->file('image'), 'user/cover', 300, 300) // crop ima
 dodStore::resizeImage($request->file('image'), 'user/cover', 300, 300) // force resize image
 
 // Ratio is mean not resize or crop retain maximal original image size
-dodStore::cropImageRatio($request->file('image'), 'user/cover', 300, 300) // crop image from center 
+dodStore::cropImageRatio($request->file('image'), 'user/cover', 300, 300) // crop image from center
 dodStore::resizeImageRatio($request->file('image'), 'user/cover', 300, 300)
 
 dodStore::store($request->file('image'), 'image') // store image in /storage/app/public/image
@@ -114,7 +114,7 @@ Send timestamp (created_at, updated_at in laravel) to function will return strin
 getMonthListTH($index, $short = false)
 getDateTH($strDate, $fullMonth = false, $time = false)
 getTimeFromDate($strDate, $second = true)
-``` 
+```
 
 e.g.
 
