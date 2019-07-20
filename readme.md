@@ -104,6 +104,7 @@ get id from url support Youtube, Vimeo if wrong format will return `null`.
 ```php
 getYoutubeId('https://www.youtube.com/watch?v=aAzUC8vNtgo') // output: aAzUC8vNtgo
 getVimeoId('https://vimeo.com/68529790') // output: 68529790
+getVideoProvider('https://www.youtube.com/watch?v=aAzUC8vNtgo') // output: youtube
 ```
 
 ### Time function in Thailand country format

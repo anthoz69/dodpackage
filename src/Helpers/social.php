@@ -21,3 +21,12 @@ function getVimeoId($url)
         return;
     }
 }
+
+function getVideoProvider($url)
+{
+    if (getYoutubeId($url)) {
+        return 'youtube';
+    }
+
+    return 'vimeo';
+}
