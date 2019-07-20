@@ -6,7 +6,7 @@ use Image;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
-class dodStorage
+class DODStore
 {
     private $resultFile;
     private $resultFilePath;
@@ -35,7 +35,7 @@ class dodStorage
         return Storage::url($storePath, 'public');
     }
 
-    public function save()
+    private function save()
     {
         Storage::disk('public')->put($this->resultFilePath, (string) $this->resultFile->encode());
 

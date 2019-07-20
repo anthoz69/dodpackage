@@ -1,17 +1,23 @@
 <?php
 
-function youtubeID($url)
+function getYoutubeId($url)
 {
     $regex = "/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/";
-    preg_match($regex, $url, $matches);
 
-    return $matches[1];
+    if (preg_match($regex, $url, $matches)) {
+        return $matches[1];
+    } else {
+        return null;
+    }
 }
 
-function vimeoID($url)
+function getVimeoId($url)
 {
-    $regexstr = "/(https?:\/\/)?(www\.)?(player\.)?vimeo\.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/";
-    preg_match($regexstr, $url, $matches);
+    $regex = "/(https?:\/\/)?(www\.)?(player\.)?vimeo\.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/";
 
-    return $matches[5];
+    if (preg_match($regex, $url, $matches)) {
+        return $matches[5];
+    } else {
+        return null;
+    }
 }

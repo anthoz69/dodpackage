@@ -1,51 +1,67 @@
 <?php
 
-function getMonth($index, $cut = false)
+function getMonthListTH($index, $short = false)
 {
-    $full_month = [
-        '', 'มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม',
-        'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม',
-        'พฤศจิกายน', 'ธันวาคม',
-    ];
-    $cut_month = [
-        '', 'ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.',
-        'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.',
-    ];
-    if ($cut) {
-        return $cut_month[$index];
-    }
-
-    return $full_month[$index];
+	$fullMonth = [
+		'',
+		'มกราคม',
+		'กุมภาพันธ์',
+		'มีนาคม',
+		'เมษายน',
+		'พฤษภาคม',
+		'มิถุนายน',
+		'กรกฎาคม',
+		'สิงหาคม',
+		'กันยายน',
+		'ตุลาคม',
+		'พฤศจิกายน',
+		'ธันวาคม',
+	];
+	$shortMonth = [
+		'',
+		'ม.ค.',
+		'ก.พ.',
+		'มี.ค.',
+		'เม.ย.',
+		'พ.ค.',
+		'มิ.ย.',
+		'ก.ค.',
+		'ส.ค.',
+		'ก.ย.',
+		'ต.ค.',
+		'พ.ย.',
+		'ธ.ค.',
+	];
+	if ($short) {
+		return $shortMonth[$index];
+	}
+	return $fullMonth[$index];
 }
 
-function dateThTime($strDate)
+function getDateTH($strDate, $fullMonth = false, $time = false)
 {
-    $strYear = date('Y', strtotime($strDate)) + 543;
-    $strMonth = date('n', strtotime($strDate));
-    $strDay = date('j', strtotime($strDate));
-    $strHour = date('H', strtotime($strDate));
-    $strMinute = date('i', strtotime($strDate));
-    $strSeconds = date('s', strtotime($strDate));
-    $strMonthThai = getMonth($strMonth, true);
+	$year = date('Y', strtotime($strDate)) + 543;
+	$month = date('n', strtotime($strDate));
+	$day = date('j', strtotime($strDate));
+	$hour = date('H', strtotime($strDate));
+	$minute = date('i', strtotime($strDate));
 
-    return "$strDay $strMonthThai $strYear $strHour:$strMinute";
+	$month = getMonthListTH($month, $fullMonth);
+
+	if ($time) {
+		return "$day $month $year $hour:$minute";
+	}
+	return "$day $month $year";
 }
 
-function dateTh($strDate)
+function getTimeFromDate($strDate, $second = true)
 {
-    $strYear = date('Y', strtotime($strDate)) + 543;
-    $strMonth = date('n', strtotime($strDate));
-    $strDay = date('j', strtotime($strDate));
-    $strMonthThai = getMonth($strMonth);
+	$hour = date('H', strtotime($strDate));
+	$minute = date('i', strtotime($strDate));
+	$seconds = date('s', strtotime($strDate));
 
-    return "$strDay $strMonthThai พ.ศ. $strYear";
-}
-
-function timeFromDate($strDate)
-{
-    $strHour = date('H', strtotime($strDate));
-    $strMinute = date('i', strtotime($strDate));
-    $strSeconds = date('s', strtotime($strDate));
-
-    return "$strHour:$strMinute:$strSeconds";
+	if ($second) {
+		return "$hour:$minute:$seconds";
+	}
+	return "$hour:$minute";
 }

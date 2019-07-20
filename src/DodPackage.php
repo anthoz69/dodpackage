@@ -2,7 +2,7 @@
 
 namespace anthoz69\dodpackage;
 
-class dodpackage
+class DODPackage
 {
     // Build wonderful things
 }
