@@ -4,7 +4,7 @@ namespace anthoz69\dodpackage\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class DODStore extends Facade
+class DodStore extends Facade
 {
     /**
      * Get the registered name of the component.

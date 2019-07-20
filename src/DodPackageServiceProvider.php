@@ -4,7 +4,7 @@ namespace anthoz69\dodpackage;
 
 use Illuminate\Support\ServiceProvider;
 
-class DODPackageServiceProvider extends ServiceProvider
+class DodPackageServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
@@ -35,13 +35,13 @@ class DODPackageServiceProvider extends ServiceProvider
 
         // Register the service the package provides.
         $this->app->singleton('dodpackage', function ($app) {
-            return new DODPackage;
+            return new DodPackage;
         });
         $this->app->singleton('dodstore', function ($app) {
-            return new DODStore;
+            return new DodStore;
         });
         $this->app->singleton('dodslug', function ($app) {
-            return new DODSlug;
+            return new DodSlug;
         });
 
         $this->loadHelper();

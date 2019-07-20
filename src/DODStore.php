@@ -6,7 +6,7 @@ use Image;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
-class DODStore
+class DodStore
 {
     private $resultFile;
     private $resultFilePath;

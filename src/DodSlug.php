@@ -2,7 +2,7 @@
 
 namespace anthoz69\dodpackage;
 
-class DODSlug
+class DodSlug
 {
     public static function slug($string, $separator)
     {

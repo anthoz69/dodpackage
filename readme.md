@@ -17,7 +17,7 @@ composer require anthoz69/dodpackage
 
 The package will automatically register its service provider.
 
-> **Note**: If you are using Laravel 5.5, the steps 2 and 3, for providers and aliases, are unnecessaries. DOD Package supports Laravel new [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery).
+> **Note**: If you are using Laravel 5.5, the steps 2 and 3, for providers and aliases, are unnecessaries. Dod Package supports Laravel new [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery).
 
 2 - You need to update your application configuration in order to register the package so it can be loaded by Laravel, just update your `config/app.php` file adding the following code at the end of your `'providers'` section:
 
@@ -26,7 +26,7 @@ The package will automatically register its service provider.
 ```php
 'providers' => [
     // other providers ommited
-    anthoz69\dodpackage\Providers\DODPackageServiceProvider::class,
+    anthoz69\dodpackage\Providers\DodPackageServiceProvider::class,
 ],
 ```
 

@@ -34,12 +34,12 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Anthoz69\\DodPackage\\DODPackageServiceProvider"
+                "Anthoz69\\DodPackage\\DodPackageServiceProvider"
             ],
             "aliases": {
-                "DODPackage": "Anthoz69\\DodPackage\\Facades\\DODPackage",
-				"DODSlug": "Anthoz69\\DodPackage\\Facades\\DODSlug",
-				"DODStore": "Anthoz69\\DodPackage\\Facades\\DODStore"
+                "DodPackage": "Anthoz69\\DodPackage\\Facades\\DodPackage",
+				"DodSlug": "Anthoz69\\DodPackage\\Facades\\DodSlug",
+				"DodStore": "Anthoz69\\DodPackage\\Facades\\DodStore"
             }
         }
     }
