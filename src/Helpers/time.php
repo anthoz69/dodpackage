@@ -35,6 +35,7 @@ function getMonthListTH($index, $short = false)
     if ($short) {
         return $shortMonth[$index];
     }
+
     return $fullMonth[$index];
 }
 
@@ -51,6 +52,7 @@ function getDateTH($strDate, $fullMonth = false, $time = false)
     if ($time) {
         return "$day $month $year $hour:$minute";
     }
+
     return "$day $month $year";
 }
 
@@ -63,5 +65,6 @@ function getTimeFromDate($strDate, $second = true)
     if ($second) {
         return "$hour:$minute:$seconds";
     }
+
     return "$hour:$minute";
 }

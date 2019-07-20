@@ -7,7 +7,7 @@ function getYoutubeId($url)
     if (preg_match($regex, $url, $matches)) {
         return $matches[1];
     } else {
-        return null;
+        return;
     }
 }
 
@@ -18,6 +18,6 @@ function getVimeoId($url)
     if (preg_match($regex, $url, $matches)) {
         return $matches[5];
     } else {
-        return null;
+        return;
     }
 }
