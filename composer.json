@@ -23,23 +23,23 @@
     },
     "autoload": {
         "psr-4": {
-            "Anthoz69\\DodPackage\\": "src/"
+            "anthoz69\\dodpackage\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Anthoz69\\DodPackage\\Tests\\": "tests"
+            "anthoz69\\dodpackage\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Anthoz69\\DodPackage\\DodPackageServiceProvider"
+                "anthoz69\\dodpackage\\DodPackageServiceProvider"
             ],
             "aliases": {
-                "DodPackage": "Anthoz69\\DodPackage\\Facades\\DodPackage",
-				"DodSlug": "Anthoz69\\DodPackage\\Facades\\DodSlug",
-				"DodStore": "Anthoz69\\DodPackage\\Facades\\DodStore"
+                "DodPackage": "anthoz69\\dodpackage\\Facades\\DodPackage",
+				"DodSlug": "anthoz69\\dodpackage\\Facades\\DodSlug",
+				"DodStore": "anthoz69\\dodpackage\\Facades\\DodStore"
             }
         }
     }
