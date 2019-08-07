@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
 This package is collect my methods and function use frequently in laravel be careful if you are using this package it can be breaking chage anytime. Please fork it to your own repository, And send some PR for cool feature if you need to contribute it.
@@ -150,12 +149,10 @@ license is under MIT. Please see the [license file](license.md) for more informa
 
 [ico-version]: https://img.shields.io/packagist/v/anthoz69/dodpackage.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/anthoz69/dodpackage.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/anthoz69/dodpackage/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/170982626/shield
 
 [link-packagist]: https://packagist.org/packages/anthoz69/dodpackage
 [link-downloads]: https://packagist.org/packages/anthoz69/dodpackage
-[link-travis]: https://travis-ci.org/anthoz69/dodpackage
 [link-styleci]: https://styleci.io/repos/170982626
 [link-author]: https://github.com/anthoz69
 [link-contributors]: ../../contributors
