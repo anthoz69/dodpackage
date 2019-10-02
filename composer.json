@@ -12,7 +12,7 @@
     "homepage": "https://github.com/anthoz69/dodpackage",
     "keywords": ["Laravel", "dodpackage"],
     "require": {
-        "illuminate/support": "~5",
+        "illuminate/support": "~6",
         "intervention/image": "^2.4"
     },
     "require-dev": {
